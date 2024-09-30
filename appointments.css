@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.appointments-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #4CAF50; /* Change this to your preferred color */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+}
+
+input, textarea, button {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.existing-appointments, .appointment-policy, .confirmation-message {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.confirmation-message {
+    display: none; /* Initially hidden, will be shown on successful booking */
+}
+.footer-content {
+    text-align: center;
+    padding: 20px;
+    background-color: #f1f1f1;
+}
+
+.footer-content a {
+    margin: 0 10px;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.footer-content a i {
+    margin-right: 8px;
+    transition: color 0.3s;
+}
+
+.footer-content a[href^="mailto"] i {
+    color: #D44638; /* Red for email (Gmail-like color) */
+}
+
+.footer-content a[href*="facebook.com"] i {
+    color: #1877F2; /* Facebook blue */
+}
+
+.footer-content a[href*="twitter.com"] i {
+    color: #000000; /* Black for X (formerly Twitter) */
+}
+
+.footer-content a[href*="instagram.com"] i {
+    background: linear-gradient(45deg, #f3a953, #d62976, #962fbf); 
+    color: #E1306C; /* Instagram gradient pink */
+}
+
+.footer-content a[href*="linkedin.com"] i {
+    color: #0077B5; /* LinkedIn blue */
+}
+
+.footer-content a:hover i {
+    color: #ffae42; /* Color change on hover */
+}
+

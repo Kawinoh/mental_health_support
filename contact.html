@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Mental Health Support - Contact</title>
+    <script>
+        function validateForm() {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+            const submitButton = document.getElementById("submit-btn");
+
+            // Enable or disable the submit button based on input
+            submitButton.disabled = !(name && email && message);
+        }
+    </script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="appointments.html">Appointments</a></li>
+            <li><a href="profile.php">Profile</a></li>
+        </ul>
+    </nav>
+    
+    <div class="contact-container">
+        <h1>Contact Us</h1>
+        <div class="contact-form">
+            <form action="contact.php" method="POST" oninput="validateForm()">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your name.." required> <br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your email.." required> <br>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Type your message.." required></textarea> <br>
+                <button type="submit" id="submit-btn" style="width: 100%; background-color: #4CAF50; color: white; padding: 14px 20px; margin: 8px 0; border: none; border-radius: 4px; cursor: pointer;" disabled>Send Message</button>
+            </form>
+        </div>
+
+        <div class="contact-info">
+            <h2>Our Contact Information</h2>
+            <p><strong>Email:</strong> support@mentalhealth.org</p>
+            <p><strong>Phone:</strong> (+254) 7073-32850</p>
+            <p><strong>Address:</strong> Kendu Bay, Homabay, BA 2344</p>
+        </div>
+
+        <div class="map">
+            <h2>Find Us Here</h2>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509449!2d144.95373631531858!3d-37.81627997975124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f4d26d7%3A0xf2414e9a3b78c7e4!2s123%20Wellness%20Ave%2C%20Cityville%2C%20ST%2012345!5e0!3m2!1sen!2sus!4v1641234567890!5m2!1sen!2sus"
+                width="600"
+                height="450"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"></iframe>
+        </div>
+
+        <div class="faqs">
+            <h2>Frequently Asked Questions</h2>
+            <dl>
+                <dt>What should I include in my message?</dt>
+                <dd>Please provide your name, email, and a brief description of your inquiry or concern.</dd>
+
+                <dt>How quickly can I expect a response?</dt>
+                <dd>We strive to respond to all inquiries within 24 hours during business days.</dd>
+
+                <dt>Is it possible to schedule a call?</dt>
+                <dd>Yes, please indicate in your message if you would like to schedule a call, and we will get back to you to arrange it.</dd>
+            </dl>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Mental Health Support. All Rights Reserved.</p>
+            <p>Contact us: 
+                <a href="mailto:info@mentalhealthsupport.org" target="_blank">
+                    <i class="fas fa-envelope"></i>info@mentalhealthsupport.org
+                </a> 
+                | Phone: +254-707-332-850
+            </p>
+        
+        <p>Follow us: 
+            <a href="#" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#" target="_blank">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </p>
+        </div>
+    </footer>
+</body>
+</html>

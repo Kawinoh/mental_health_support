@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.contact-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #4CAF50; /* Change this to your preferred color */
+}
+.contact-form {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+   
+}
+label {
+    display: block; /* Make labels block elements to stack them vertically */
+    margin-bottom: 8px; /* Space between label and input */
+    font-weight: bold; /* Optional: Makes the label text bold */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; /* Make inputs full width for better layout */
+    padding: 10px; /* Add padding inside inputs for better spacing */
+    margin-bottom: 15px; /* Space between input fields and next label */
+    border: 1px solid #ccc; /* Add a border to inputs */
+    border-radius: 4px; /* Rounded corners for inputs */
+}
+
+textarea {
+    height: 100px; /* Set a fixed height for the textarea */
+    resize: vertical; /* Allow users to resize vertically */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+.contact-info {
+    margin-top: 30px;
+}
+
+.map {
+    margin-top: 30px;
+}
+
+.faqs {
+    margin-top: 30px;
+}
+
+dl {
+    margin: 0;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin: 0 0 15px 20px;
+}
+
+.footer-content {
+    text-align: center;
+    padding: 20px;
+    background-color: #f1f1f1;
+}
+
+.footer-content a {
+    margin: 0 10px;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.footer-content a i {
+    margin-right: 8px;
+    transition: color 0.3s;
+}
+
+.footer-content a[href^="mailto"] i {
+    color: #D44638; /* Red for email (Gmail-like color) */
+}
+
+.footer-content a[href*="facebook.com"] i {
+    color: #1877F2; /* Facebook blue */
+}
+
+.footer-content a[href*="twitter.com"] i {
+    color: #000000; /* Black for X (formerly Twitter) */
+}
+
+.footer-content a[href*="instagram.com"] i {
+    background: linear-gradient(45deg, #f3a953, #d62976, #962fbf); 
+    color: #E1306C; /* Instagram gradient pink */
+}
+
+.footer-content a[href*="linkedin.com"] i {
+    color: #0077B5; /* LinkedIn blue */
+}
+
+.footer-content a:hover i {
+    color: #ffae42; /* Color change on hover */
+}

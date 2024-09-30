@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="appointments.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Mental Health Support - Appointments</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="appointments.html">Appointments</a></li>
+            <li><a href="profile.php">Profile</a></li>
+        </ul>
+    </nav>
+
+    <div class="appointments-container">
+        <h1>Book an Appointment</h1>
+        <form action="book_appointment.php" method="POST">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" required></textarea>
+            <button type="submit">Book Appointment</button>
+        </form>
+
+        <div class="existing-appointments">
+            <h2>Your Existing Appointments</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Description</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Sample Data, this should be dynamically generated from the database -->
+                    <tr>
+                        <td>2024-10-01</td>
+                        <td>10:00 AM</td>
+                        <td>Initial Consultation</td>
+                        <td>Confirmed</td>
+                    </tr>
+                    <tr>
+                        <td>2024-10-05</td>
+                        <td>02:00 PM</td>
+                        <td>Follow-Up Session</td>
+                        <td>Pending</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="appointment-policy">
+            <h2>Appointment Policies</h2>
+            <p>Please arrive 10 minutes early to your appointment. If you need to cancel or reschedule, kindly do so at least 24 hours in advance.</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Mental Health Support. All Rights Reserved.</p>
+            <p>Contact us: 
+                <a href="mailto:info@mentalhealthsupport.org" target="_blank">
+                    <i class="fas fa-envelope"></i>info@mentalhealthsupport.org
+                </a> 
+                | Phone: +254-707-332-850
+            </p>
+        
+            <p>Follow us: 
+                <a href="#" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        // Function to display alert message based on URL parameter
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const status = urlParams.get('status');
+
+            if (status) {
+                let message = '';
+
+                switch (status) {
+                    case 'success':
+                        message = 'Appointment booked successfully!';
+                        break;
+                    case 'error':
+                        message = 'Error booking appointment.';
+                        break;
+                    case 'login_required':
+                        message = 'You must be logged in to book an appointment.';
+                        break;
+                    default:
+                        message = '';
+                }
+
+                if (message) {
+                    alert(message);
+                }
+            }
+        };
+    </script>
+</body>
+</html>
