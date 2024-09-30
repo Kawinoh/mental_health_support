@@ -1,0 +1,1 @@
+The Mental Health Support Platform is designed to provide users with access to various mental health services, resources, and support. The platform aims to create a safe space for individuals seeking help and information related to mental health issues. It includes features such as user profiles, appointments, and a range of resources.
